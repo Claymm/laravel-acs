@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/Claymm/laravel-arrowdb.svg?branch=master)](https://travis-ci.org/Claymm/laravel-arrowdb)
 
-A package to interface with ArrowDB - Appcelerator Cloud Services
+A package to interface with [ArrowDB](http://docs.appcelerator.com/arrowdb/latest) - Appcelerator Cloud Services
 
 ## Installation
 
@@ -14,7 +14,7 @@ Add the service provider and alias to app/config/app.php:
 
     'Claymm\ArrowDB\ArrowDBServiceProvider',
     
-    'ArrowDB' => 'H3r2on\ArrowDB\Facades\ArrowDB',
+    'ArrowDB' => 'Claymm\ArrowDB\Facades\ArrowDB',
 
 To publish the configuration file you'll have to:
 
