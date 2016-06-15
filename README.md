@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/Claymm/laravel-arrowdb.svg?branch=master)](https://travis-ci.org/Claymm/laravel-arrowdb)
 
-A package to interface with [ArrowDB](http://docs.appcelerator.com/arrowdb/latest) - Appcelerator Cloud Services
+A package to interface with [ArrowDB](http://docs.appcelerator.com/arrowdb/latest) - Appcelerator Cloud Services (ACS)
 
 ## Installation
 
