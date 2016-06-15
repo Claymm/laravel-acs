@@ -60,6 +60,10 @@ class ArrowDB
 
     protected function authenticate($email, $password)
     {
+        if (Session::has('arrowdb_user')) {
+            return Session::get('arrowdb_user');
+        }
+
         $login = array(
             'login'    => $email,
             'password' => $password
@@ -85,7 +89,7 @@ class ArrowDB
         $response = json_decode($login, true);
         $user     = $response['response']['users'][0];
 
-        return $user;
+        return Session::put('arrowdb_user', $user);
     }
 
     protected function send($verb, $url, $data, $secure)
