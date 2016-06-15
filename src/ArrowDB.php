@@ -21,8 +21,8 @@ class ArrowDB
 
     public function __construct()
     {
-        $this->apiUrl     = config("arrowdb::base_url");
-        $this->appKey     = config("arrowdb::api_key");
+        $this->apiUrl     = config("arrowdb.base_url");
+        $this->appKey     = config("arrowdb.api_key");
         $this->cookiePath = config("session.files");
     }
 

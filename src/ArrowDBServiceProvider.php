@@ -1,4 +1,4 @@
-<?php namespace Claymm\Acs;
+<?php namespace Claymm\ArrowDB;
 
 use Illuminate\Support\ServiceProvider;
 

@@ -18,7 +18,7 @@ Add the service provider and alias to app/config/app.php:
 
 To publish the configuration file you'll have to:
 
-   artisan config:publish claymm/laravel-arrowdb
+   $ php artisan vendor:publish --provider="Claymm\ArrowDB\ArrowDBServiceProvider"
 
 
 ## Basic Usage
