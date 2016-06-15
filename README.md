@@ -8,13 +8,13 @@ A package to interface with [ArrowDB](http://docs.appcelerator.com/arrowdb/lates
 
 To install the following to your composer.json
 
-    `"claymm/laravel-arrowdb" : "~1.0"`
+    "claymm/laravel-arrowdb" : "~1.0"
 
 Add the service provider and alias to app/config/app.php:
 
-    `'Claymm\ArrowDB\ArrowDBServiceProvider',`
+    'Claymm\ArrowDB\ArrowDBServiceProvider',
     
-    `'ArrowDB' => 'Claymm\ArrowDB\Facades\ArrowDB',`
+    'ArrowDB' => 'Claymm\ArrowDB\Facades\ArrowDB',
 
 To publish the configuration file you'll have to run:
 
