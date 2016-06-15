@@ -18,10 +18,8 @@ class ArrowDBServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->package('claymm/laravel-arrowdb', null, __DIR__);
-
         $this->publishes([
-            __DIR__.'/config/config.php' => config_path('arrowdb.php'),
+            __DIR__.'/config/arrowdb.php' => config_path('arrowdb.php'),
         ]);
     }
 
