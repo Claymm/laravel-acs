@@ -1,5 +1,6 @@
 <?php namespace Claymm\ArrowDB;
 
+use Exception;
 use Session;
 
 class ArrowDB
@@ -78,19 +79,13 @@ class ArrowDB
 
         $login = curl_exec($ch);
         if (! $login) {
-            print_r(curl_error($ch));
+            throw new Exception(curl_error($ch));
         }
 
         $response = json_decode($login, true);
+        $user     = $response['response']['users'][0];
 
-        $user = $response['response']['users'][0];
-
-        return array(
-            'id'    => $user['id'],
-            'cn'    => $user['first_name'] . ' ' . $user['last_name'],
-            'role'  => $user['role'],
-            'email' => $user['email']
-        );
+        return $user;
     }
 
     protected function send($verb, $url, $data, $secure)
