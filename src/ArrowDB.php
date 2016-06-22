@@ -109,7 +109,6 @@ class ArrowDB
         curl_setopt($ch, CURLOPT_COOKIEJAR, $this->cookiePath.'/jar_'.$sessionId.'.data');
         curl_setopt($ch, CURLOPT_COOKIEFILE, $this->cookiePath.'/jar_'.$sessionId.'.data');
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
         switch ($verb) {
