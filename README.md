@@ -16,9 +16,9 @@ Add the service provider and alias to app/config/app.php:
     
     'ArrowDB' => 'Claymm\ArrowDB\Facades\ArrowDB',
 
-To publish the configuration file you'll have to:
+To publish the configuration file you'll have to run:
 
-   $ php artisan vendor:publish --provider="Claymm\ArrowDB\ArrowDBServiceProvider"
+   `$ php artisan vendor:publish --provider="Claymm\ArrowDB\ArrowDBServiceProvider"`
 
 
 ## Basic Usage
