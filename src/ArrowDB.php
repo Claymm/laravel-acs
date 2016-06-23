@@ -85,10 +85,15 @@ class ArrowDB
             throw new Exception(curl_error($ch));
         }
 
-        $response = json_decode($login, true);
-        $user     = $response['response']['users'][0];
+        $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        if ($httpcode === 200) {
+            $response = json_decode($login, true);
+            $user     = $response['response']['users'][0];
+            Session::put('arrowdb_user', $user);
+            return true;
+        }
 
-        return Session::put('arrowdb_user', $user);
+        return false;
     }
 
     protected function send($verb, $url, $data, $secure)
